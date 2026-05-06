@@ -3,7 +3,8 @@ import playingGod from "../../assets/playing-god.svg";
 import clockin from "../../assets/clockin.png";
 import dashboard from "../../assets/dashboard.png";
 import jokiTugas from "../../assets/joki-tugas.jpg";
-4
+import Solar from "../../assets/solar.png";
+
 const Projects = () => {
   return (
     <section id="projects" className="px-4 md:px-8 py-20 bg-[#0c0c0c] overflow-hidden">
@@ -87,6 +88,33 @@ const Projects = () => {
             </span>
             <span className="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs rounded-full border border-blue-500/20">
               Dashboard Admin
+            </span>
+          </div>
+        </div>
+
+        <div className="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm hover:border-blue-500/50 transition-all group">
+          <div className="h-48 bg-black/40 rounded-xl mb-6 overflow-hidden flex items-center justify-center">
+            <img
+              src={Solar}
+              alt="Solar Preview"
+              className="h-full w-full object-cover rounded-xl"
+            />
+          </div>
+          <h3 className="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors">
+            SOLAR
+          </h3>
+          <p className="text-gray-400 text-sm mb-6">
+            Aplikasi Manajemen Energi Surya
+          </p>
+          <div className="flex gap-3">
+            <span className="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs rounded-full border border-blue-500/20">
+              React + Vite
+            </span>
+            <span className="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs rounded-full border border-blue-500/20">
+              Tailwind CSS
+            </span>
+            <span className="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs rounded-full border border-blue-500/20">
+              Chart.js
             </span>
           </div>
         </div>
