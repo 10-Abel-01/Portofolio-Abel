@@ -23,7 +23,7 @@ const Projects = () => {
             />
           </div>
           <h3 className="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors">
-            DIGITAL DASHBOARD
+            DASHBOARD
           </h3>
           <p className="text-gray-400 text-sm mb-6">
             AI-Powered Community Management
