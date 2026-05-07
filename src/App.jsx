@@ -23,7 +23,7 @@ function App() {
           <h1 className="text-center m-4 text-2xl font-bold text-[1.3rem]">CONTACT ME</h1>
             <div className="flex justify-center gap-12 mb-6">
               <a
-                href="https://github.com/Sirius-11000001/"
+                href="https://github.com/10-Abel-01/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-white transition"
