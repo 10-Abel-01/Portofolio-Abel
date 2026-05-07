@@ -117,6 +117,11 @@ const Projects = () => {
               Chart.js
             </span>
           </div>
+          <a href="https://solar-ews.vercel.app/" target="_blank" rel="noopener noreferrer">
+            <button className="px-4 mt-4 py-2 bg-cyan-500 text-white text-sm rounded-full border border-blue-500/20 hover:bg-blue-500/60 transition-colors">
+              Demo
+            </button>
+          </a>
         </div>
 
         <div className="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm hover:border-blue-500/50 transition-all group">
