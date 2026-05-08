@@ -11,7 +11,7 @@ const Footer = () => {
                     <div>
                         <h2 className="text-xl font-bold mb-4">Abel Saferyan</h2>
                         <p className="text-muted-foreground text-sm">
-                            Partner teknologi terpercaya untuk bisnis Anda.
+                            Partner teknologi terpercaya untuk bisnis Anda. Jangan ragu untuk menghubungi saya untuk kebutuhan pengembangan web dan mobile Anda. Saya siap membantu Anda mencapai tujuan bisnis dengan solusi teknologi terbaik.
                         </p>
                     </div>
 
