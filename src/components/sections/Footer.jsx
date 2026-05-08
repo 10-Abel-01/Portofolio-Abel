@@ -7,7 +7,6 @@ const Footer = () => {
         <footer id="footer" className="border-t border-border pt-16 pb-8 px-6">
             <div className="max-w-7xl mx-auto">
                 <div className="grid md:grid-cols-3 gap-12 mb-14">
-
                     <div>
                         <h2 className="text-xl font-bold mb-4">Abel Saferyan</h2>
                         <p className="text-muted-foreground text-sm">
