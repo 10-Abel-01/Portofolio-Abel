@@ -4,6 +4,7 @@ import clockin from "../../assets/clockin.png";
 import dashboard from "../../assets/dashboard.png";
 import jokiTugas from "../../assets/joki-tugas.jpg";
 import Solar from "../../assets/solar.png";
+// import Zynova from "../../assets/zynova.png";
 
 const Projects = () => {
   return (
@@ -14,6 +15,38 @@ const Projects = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* card */}
+        <div className="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm hover:border-blue-500/50 transition-all group">
+          <div className="h-48 bg-black/40 rounded-xl mb-6 overflow-hidden flex items-center justify-center">
+            <img
+              src={Solar}
+              alt="Zynovaworks Preview"
+              className="h-full w-full object-cover rounded-xl"
+            />
+          </div>
+          <h3 className="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors">
+            Web Company Profile
+          </h3>
+          <p className="text-gray-400 text-sm mb-6">
+            Merancang Desain/Asset pada Zynovaworks.
+          </p>
+          <div className="flex gap-3">
+            <span className="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs rounded-full border border-blue-500/20">
+              Design from Scratch
+            </span>
+            <span className="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs rounded-full border border-blue-500/20">
+              Ibis Paint
+            </span>
+            <span className="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs rounded-full border border-blue-500/20">
+              UI/UX Design
+            </span>
+          </div>
+          <a href="https://zynovaworks.com" target="_blank" rel="noopener noreferrer">
+            <button className="px-4 mt-4 py-2 bg-cyan-500 text-white text-sm rounded-full border border-blue-500/20 hover:bg-blue-500/60 transition-colors">
+              Demo
+            </button>
+          </a>
+        </div>
+
         <div className="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm hover:border-blue-500/50 transition-all group">
           <div className="h-48 bg-black/40 rounded-xl mb-6 overflow-hidden flex items-center justify-center">
             <img
@@ -81,7 +114,7 @@ const Projects = () => {
           </p>
           <div className="flex gap-3">
             <span className="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs rounded-full border border-blue-500/20">
-              Native PHP
+              UI/UX Design
             </span>
             <span className="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs rounded-full border border-blue-500/20">
               Flutter
