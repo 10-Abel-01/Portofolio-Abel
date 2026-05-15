@@ -8,14 +8,14 @@ const Footer = () => {
             <div className="max-w-7xl mx-auto">
                 <div className="grid md:grid-cols-3 gap-12 mb-14">
                     <div>
-                        <h2 className="text-xl font-bold mb-4">Abel Saferyan</h2>
-                        <p className="text-muted-foreground text-sm">
+                        <h2 className="font-light text-xl font-semi-bold mb-4">Abel Saferyan</h2>
+                        <p className="font-light text-gray-400 text-muted-foreground text-sm">
                             Partner teknologi terpercaya untuk bisnis Anda. Jangan ragu untuk menghubungi saya untuk kebutuhan pengembangan web dan mobile Anda. Saya siap membantu Anda mencapai tujuan bisnis dengan solusi teknologi terbaik.
                         </p>
                     </div>
 
                     <div>
-                        <p className="text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-5">
+                        <p className="font-light text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-5">
                             Social Media
                         </p>
                         <div className="flex gap-3">
@@ -31,7 +31,7 @@ const Footer = () => {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     aria-label={item.label}
-                                    className="text-muted-foreground hover:text-primary transition-colors"
+                                    className="text-gray-400 font-light text-muted-foreground hover:text-primary transition-colors"
                                 >
                                     {item.icon}
                                 </a>
@@ -40,10 +40,10 @@ const Footer = () => {
                     </div>
 
                     <div>
-                        <p className="text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-5">
+                        <p className="font-light text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-5">
                             Contact
                         </p>
-                        <ul className="space-y-3">
+                        <ul className="space-y-3 text-gray-400 font-light">
                             <li className="flex items-start gap-2.5 text-muted-foreground text-sm">
                                 <Mail size={15} className="mt-0.5 flex-shrink-0 text-primary/60" />
                                 abel061001@gmail.com
