@@ -4,7 +4,7 @@ import clockin from "../../assets/clockin.png";
 import dashboard from "../../assets/dashboard.png";
 import jokiTugas from "../../assets/joki-tugas.jpg";
 import Solar from "../../assets/solar.png";
-// import Zynova from "../../assets/zynova.png";
+import Zynova from "../../assets/zynova.png";
 
 const Projects = () => {
   return (
@@ -18,7 +18,7 @@ const Projects = () => {
         <div className="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm hover:border-blue-500/50 transition-all group">
           <div className="h-48 bg-black/40 rounded-xl mb-6 overflow-hidden flex items-center justify-center">
             <img
-              src={Solar}
+              src={Zynova}
               alt="Zynovaworks Preview"
               className="h-full w-full object-cover rounded-xl"
             />
