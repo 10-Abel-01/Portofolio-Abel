@@ -19,10 +19,10 @@ const Hero = () => {
           <span className="text-blue-500">ABEL SAFERYAN</span>.
           <br />
           SAYA MEMBANGUN <br />
-          ANTARMUKA YANG PRESISI.
+          WEBSITE YANG PRESISI.
         </h1>
         <p className="text-gray-400 text-lg md:text-xl max-w-xl font-light">
-          Web Developer & Music Enthusiast | Coding interfaces that
+          Web Developer & Music Enthusiast | Coding that
           resonate. | Alias Gabut aja
         </p>
         <button
