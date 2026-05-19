@@ -31,6 +31,9 @@ const Projects = () => {
           </p>
           <div className="flex gap-3">
             <span className="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs rounded-full border border-blue-500/20">
+              Next.js
+            </span>
+            <span className="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs rounded-full border border-blue-500/20">
               Design from Scratch
             </span>
             <span className="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs rounded-full border border-blue-500/20">
