@@ -1,6 +1,6 @@
 import React from "react";
 import { Mail, Phone, MapPin } from "lucide-react";
-import { FaLinkedin, FaGithub, FaInstagram, FaFacebook } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaInstagram, FaFacebook, FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
     return (
@@ -16,7 +16,7 @@ const Footer = () => {
 
                     <div>
                         <p className="font-light text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-5">
-                            Social Media
+                            Find me on
                         </p>
                         <div className="flex gap-3">
                             {[
@@ -24,6 +24,7 @@ const Footer = () => {
                                 { href: "https://github.com/10-Abel-01/", icon: <FaGithub size={20} />, label: "GitHub" },
                                 { href: "https://www.instagram.com/saferyan06", icon: <FaInstagram size={20} />, label: "Instagram" },
                                 { href: "https://www.facebook.com/profile.php?id=100084011095830", icon: <FaFacebook size={20} />, label: "Facebook" },
+                                { href: "https://wa.me/628597305027", icon: <FaWhatsapp size={20} />, label: "WhatsApp" },
                             ].map((item) => (
                                 <a
                                     key={item.label}
