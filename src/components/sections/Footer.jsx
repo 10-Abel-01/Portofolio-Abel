@@ -42,7 +42,7 @@ const Footer = () => {
 
                     <div>
                         <p className="font-light text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-5">
-                            Contact
+                            or Contact me at
                         </p>
                         <ul className="space-y-3 text-gray-400 font-light">
                             <li className="flex items-start gap-2.5 text-muted-foreground text-sm">

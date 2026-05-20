@@ -27,7 +27,7 @@ const Hero = () => {
         </p>
         <button
           onClick={() => scrollToSection("projects")}
-          className="px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-all shadow-[0_0_20px_rgba(37,99,235,0.3)]"
+          className="px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-4xl font-semibold transition-all shadow-[0_0_20px_rgba(37,99,235,0.3)]"
         >
           LIHAT PROYEK SAYA
         </button>
