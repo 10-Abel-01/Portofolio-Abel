@@ -4,7 +4,7 @@ import { FaLinkedin, FaGithub, FaInstagram, FaFacebook, FaWhatsapp } from "react
 
 const Footer = () => {
     return (
-        <footer id="footer" className="border-[1px] border-gray-500 pt-16 pb-8 px-6">
+        <section id="contact" className="border-[1px] border-gray-500 pt-16 pb-8 px-6">
             <div className="max-w-7xl mx-auto">
                 <div className="grid md:grid-cols-3 gap-12 mb-14">
                     <div>
@@ -69,7 +69,7 @@ const Footer = () => {
                     </svg>
                 </div>
             </div>
-        </footer>
+        </section>
     );
 };
 
