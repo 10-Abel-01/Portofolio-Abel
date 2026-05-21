@@ -81,7 +81,7 @@ const Projects = () => {
             </button>
           </a>
         </div>
-        
+
         <div className="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm hover:border-blue-500/50 transition-all group">
           <div className="h-48 bg-black/40 rounded-xl mb-6 overflow-hidden flex items-center justify-center">
             <img
@@ -170,7 +170,7 @@ const Projects = () => {
             />
           </div>
           <h3 className="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors">
-            JOKI TUGAS
+            Academic Task Management
           </h3>
           <p className="text-gray-400 text-sm mb-6">
             Menangani Tugas dengan Kecepatan Kilat

@@ -23,7 +23,7 @@ const Hero = () => {
         </h1>
         <p className="text-gray-400 text-lg md:text-xl max-w-xl font-light">
           Web Developer & Music Enthusiast | Coding that
-          resonate. | Alias Gabut aja
+          resonate.
         </p>
         <button
           onClick={() => scrollToSection("projects")}
