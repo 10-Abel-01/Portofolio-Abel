@@ -2,8 +2,12 @@
 
 @theme {
   @keyframes marquee {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
   }
 }
 html {
@@ -16,4 +20,94 @@ html {
 }
 section {
   scroll-margin-top: 80px;
+}
+@keyframes glitch-main {
+  0%,
+  94%,
+  100% {
+    transform: translate(0);
+  }
+  95% {
+    transform: translate(-3px, 1px);
+  }
+  96% {
+    transform: translate(3px, -1px);
+  }
+  97% {
+    transform: translate(-2px, 2px);
+  }
+  98% {
+    transform: translate(2px, 0);
+  }
+  99% {
+    transform: translate(0, -2px);
+  }
+}
+@keyframes glitch-red {
+  0%,
+  94%,
+  100% {
+    transform: translate(0);
+    opacity: 0;
+  }
+  95%,
+  99% {
+    transform: translate(-6px, 0);
+    opacity: 0.6;
+  }
+  96%,
+  98% {
+    transform: translate(5px, 1px);
+    opacity: 0.5;
+  }
+  97% {
+    transform: translate(-4px, -1px);
+    opacity: 0.7;
+  }
+}
+@keyframes glitch-blue {
+  0%,
+  94%,
+  100% {
+    transform: translate(0);
+    opacity: 0;
+  }
+  95%,
+  99% {
+    transform: translate(6px, 0);
+    opacity: 0.6;
+  }
+  96%,
+  98% {
+    transform: translate(-5px, -1px);
+    opacity: 0.5;
+  }
+  97% {
+    transform: translate(4px, 1px);
+    opacity: 0.7;
+  }
+}
+@keyframes scanline {
+  0% {
+    top: -10%;
+  }
+  100% {
+    top: 110%;
+  }
+}
+@keyframes glitch-border {
+  0%,
+  93%,
+  100% {
+    border-color: rgba(59, 130, 246, 0.3);
+  }
+  94% {
+    border-color: rgba(255, 0, 80, 0.7);
+  }
+  96% {
+    border-color: rgba(0, 200, 255, 0.7);
+  }
+  98% {
+    border-color: rgba(59, 130, 246, 0.3);
+  }
 }
