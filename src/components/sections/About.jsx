@@ -41,7 +41,7 @@ const About = () => {
             <div className="space-y-3 pt-6 border-t border-zinc-800/60 mt-6 font-mono text-[10px]">
               <div>
                 <div className="flex justify-between mb-1 text-zinc-500"><span>Logic (Python/SQL)</span><span className="text-blue-500">90%</span></div>
-                <div className="w-full bg-zinc-900 h-1 rounded-full overflow-hidden"><div className="bg-gradient-to-r from-blue-600 to-blue-400 h-1 rounded-full transition-all duration-500" style={{width: "90%"}}></div></div>
+                <div className="w-full bg-zinc-900 h-1 rounded-full overflow-hidden"><div className="bg-gradient-to-r from-blue-600 to-blue-100 h-1 rounded-full transition-all duration-500" style={{width: "90%"}}></div></div>
               </div>
               <div>
                 <div className="flex justify-between mb-1 text-zinc-500"><span>Frontend (React/Tailwind)</span><span className="text-blue-500">85%</span></div>
@@ -61,11 +61,11 @@ const About = () => {
           <div className="md:col-span-2 bg-[#121212] border border-zinc-800/80 rounded-2xl p-6 md:p-8 hover:border-zinc-700/50 transition-all duration-300 shadow-xl flex flex-col justify-between">
             <div className="space-y-5 font-sans text-zinc-400 text-sm md:text-base leading-relaxed text-justify">
               <p>
-                Sama seperti karakter utama di anime *Shonen* yang melewati <span className="text-white font-medium border-b border-zinc-800 pb-0.5">training arc</span> melelahkan sebelum membuka jurus pamungkasnya, begitulah saya memandang perjalanan hidup saya. Membagi waktu antara kuliah <span className="text-amber-500 font-medium">Teknologi Informasi</span> dan bekerja keras selama lebih dari 3 tahun di industri manufaktur telah menempa mentalitas saya menjadi sangat disiplin, tangguh di bawah tekanan, serta presisi layaknya mesin pabrik.
+                Sama seperti karakter utama di anime *Shonen* yang melewati <span className="text-white font-medium border-b border-zinc-800 pb-0.5">training arc</span> melelahkan sebelum membuka jurus pamungkasnya, begitulah saya memandang perjalanan hidup saya. Membagi waktu antara kuliah <span className="text-cyan-500 font-medium">Teknologi Informasi</span> dan bekerja keras selama lebih dari 3 tahun di industri manufaktur telah menempa mentalitas saya menjadi sangat disiplin, tangguh di bawah tekanan, serta presisi layaknya mesin pabrik.
               </p>
 
               <p>
-                Ketertarikan mendalam pada teknologi mendorong saya untuk melakukan transisi karier ke dunia rekayasa perangkat lunak. Alih-alih cuma membuat landing page statis biasa, saya tertantang untuk mendalami ekosistem web modern dan integrasi sistem yang kompleks. Salah satu proyek kebanggaan saya saat ini adalah mengawinkan dunia <span className="text-white font-medium">React.js</span> dengan komponen hardware <span className="text-amber-500 font-medium">Arduino berbasis IoT</span> untuk membangun dashboard monitoring panel surya secara *real-time*.
+                Ketertarikan mendalam pada teknologi mendorong saya untuk melakukan transisi karier ke dunia rekayasa perangkat lunak. Alih-alih cuma membuat landing page statis biasa, saya tertantang untuk mendalami ekosistem web modern dan integrasi sistem yang kompleks. Salah satu proyek kebanggaan saya saat ini adalah mengawinkan dunia <span className="text-white font-medium">React.js</span> dengan komponen hardware <span className="text-cyan-500 font-medium">Arduino berbasis IoT</span> untuk membangun dashboard monitoring panel surya secara *real-time*.
               </p>
 
               <p>
@@ -73,7 +73,6 @@ const About = () => {
               </p>
             </div>
 
-            {/* Keterangan Footer Kecil di dalam Card */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between pt-6 border-t border-zinc-800/60 mt-6 text-[11px] font-mono text-zinc-500 space-y-2 sm:space-y-0">
               <p>// Fun fact: Saya penikmat musik setia & kolektor bug absurd pas debugging wkwk.</p>
               <span className="text-zinc-600 uppercase text-[9px] tracking-widest sm:text-right">Verified_Koran_IT</span>
