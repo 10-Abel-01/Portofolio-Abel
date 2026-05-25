@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef } from "react";
+import { motion, useInView } from "motion/react";
 import playingGod from "../../assets/playing-god.svg";
 import clockin from "../../assets/clockin.png";
 import dashboard from "../../assets/dashboard.png";
@@ -6,185 +7,131 @@ import jokiTugas from "../../assets/joki-tugas.jpg";
 import Solar from "../../assets/solar.png";
 import Zynova from "../../assets/zynova.png";
 
+const projects = [
+  {
+    title: "Web Company Profile",
+    desc: "Merancang Desain/Asset pada Zynovaworks.",
+    image: Zynova,
+    alt: "Zynovaworks Preview",
+    tags: ["Next.js", "Ibis Paint", "UI/UX Design"],
+    demo: "https://zynovaworks.com",
+  },
+  {
+    title: "SOLAR",
+    desc: "Aplikasi Manajemen Energi Surya.",
+    image: Solar,
+    alt: "Solar Preview",
+    tags: ["React + Vite", "Tailwind CSS", "Chart.js"],
+    demo: "https://solar-ews.vercel.app/",
+  },
+  {
+    title: "DASHBOARD",
+    desc: "AI-Powered Community Management.",
+    image: dashboard,
+    alt: "Dashboard Preview",
+    tags: ["React", "Vite", "AI"],
+  },
+  {
+    title: "MUSICAL CODE",
+    desc: "Interaktif Guitar Chord Visualizer.",
+    image: playingGod,
+    alt: "Musical Code Preview",
+    tags: ["React", "Spotify API"],
+  },
+  {
+    title: "CLOCKIN",
+    desc: "Aplikasi Absensi Sederhana untuk Meningkatkan Manajemen Waktu menggunakan Flutter dan PHP Native.",
+    image: clockin,
+    alt: "Clockin Preview",
+    tags: ["UI/UX Design", "Flutter", "Dashboard Admin"],
+  },
+  {
+    title: "Academic Task Management",
+    desc: "Menangani Tugas dengan Kecepatan Kilat.",
+    image: jokiTugas,
+    alt: "Joki Tugas Preview",
+    tags: ["Ms Office", "UI/UX Design", "Web/Mobile Programming"],
+  },
+];
+
+const ProjectCard = ({ project, index }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-60px" });
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 40 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.5, delay: (index % 2) * 0.15, ease: "easeOut" }}
+      className="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm hover:border-blue-500/50 transition-all group flex flex-col"
+    >
+      <div className="h-48 bg-black/40 rounded-xl mb-6 overflow-hidden">
+        <img
+          src={project.image}
+          alt={project.alt}
+          className="h-full w-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500"
+        />
+      </div>
+
+      <h3 className="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors">
+        {project.title}
+      </h3>
+      <p className="text-gray-400 text-sm mb-4 flex-1">{project.desc}</p>
+
+      <div className="flex flex-wrap gap-2 mb-5">
+        {project.tags.map((tag) => (
+          <span
+            key={tag}
+            className="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs rounded-full border border-blue-500/20"
+          >
+            {tag}
+          </span>
+        ))}
+      </div>
+
+      {(project.demo || project.github) && (
+        <div className="flex gap-3 mt-auto">
+          {project.demo && (
+            <a href={project.demo} target="_blank" rel="noopener noreferrer">
+              <button className="px-4 py-2 bg-cyan-500 text-white text-sm rounded-full border border-blue-500/20 hover:bg-blue-500/60 transition-colors">
+                Demo
+              </button>
+            </a>
+          )}
+          {project.github && (
+            <a href={project.github} target="_blank" rel="noopener noreferrer">
+              <button className="px-4 py-2 bg-white/5 text-white text-sm rounded-full border border-white/10 hover:bg-white/10 transition-colors">
+                GitHub
+              </button>
+            </a>
+          )}
+        </div>
+      )}
+    </motion.div>
+  );
+};
+
 const Projects = () => {
+  const headingRef = useRef(null);
+  const headingInView = useInView(headingRef, { once: true });
+
   return (
     <section id="projects" className="px-4 md:px-8 py-20 bg-[#0c0c0c] overflow-hidden">
-      <h2 className="text-blue-500 font-bold mb-12 tracking-widest text-sm text-center md:text-left">
+      <motion.h2
+        ref={headingRef}
+        initial={{ opacity: 0, x: -20 }}
+        animate={headingInView ? { opacity: 1, x: 0 } : {}}
+        transition={{ duration: 0.5 }}
+        className="text-blue-500 font-bold mb-12 tracking-widest text-sm text-center md:text-left"
+      >
         FEATURED PROJECTS
-      </h2>
+      </motion.h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {/* card */}
-        <div className="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm hover:border-blue-500/50 transition-all group">
-          <div className="h-48 bg-black/40 rounded-xl mb-6 overflow-hidden flex items-center justify-center">
-            <img
-              src={Zynova}
-              alt="Zynovaworks Preview"
-              className="h-full w-full object-cover rounded-xl"
-            />
-          </div>
-          <h3 className="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors">
-            Web Company Profile
-          </h3>
-          <p className="text-gray-400 text-sm mb-6">
-            Merancang Desain/Asset pada Zynovaworks.
-          </p>
-          <div className="flex gap-3">
-            <span className="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs rounded-full border border-blue-500/20">
-              Next.js
-            </span>
-            <span className="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs rounded-full border border-blue-500/20">
-              Ibis Paint
-            </span>
-            <span className="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs rounded-full border border-blue-500/20">
-              UI/UX Design
-            </span>
-          </div>
-          <a href="https://zynovaworks.com" target="_blank" rel="noopener noreferrer">
-            <button className="px-4 mt-4 py-2 bg-cyan-500 text-white text-sm rounded-full border border-blue-500/20 hover:bg-blue-500/60 transition-colors">
-              Demo
-            </button>
-          </a>
-        </div>
-
-        <div className="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm hover:border-blue-500/50 transition-all group">
-          <div className="h-48 bg-black/40 rounded-xl mb-6 overflow-hidden flex items-center justify-center">
-            <img
-              src={Solar}
-              alt="Solar Preview"
-              className="h-full w-full object-cover rounded-xl"
-            />
-          </div>
-          <h3 className="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors">
-            SOLAR
-          </h3>
-          <p className="text-gray-400 text-sm mb-6">
-            Aplikasi Manajemen Energi Surya
-          </p>
-          <div className="flex gap-3">
-            <span className="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs rounded-full border border-blue-500/20">
-              React + Vite
-            </span>
-            <span className="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs rounded-full border border-blue-500/20">
-              Tailwind CSS
-            </span>
-            <span className="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs rounded-full border border-blue-500/20">
-              Chart.js
-            </span>
-          </div>
-          <a href="https://solar-ews.vercel.app/" target="_blank" rel="noopener noreferrer">
-            <button className="px-4 mt-4 py-2 bg-cyan-500 text-white text-sm rounded-full border border-blue-500/20 hover:bg-blue-500/60 transition-colors">
-              Demo
-            </button>
-          </a>
-        </div>
-
-        <div className="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm hover:border-blue-500/50 transition-all group">
-          <div className="h-48 bg-black/40 rounded-xl mb-6 overflow-hidden flex items-center justify-center">
-            <img
-              src={dashboard}
-              alt="Dashboard Preview"
-              className="h-full w-full object-cover rounded-xl"
-            />
-          </div>
-          <h3 className="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors">
-            DASHBOARD
-          </h3>
-          <p className="text-gray-400 text-sm mb-6">
-            AI-Powered Community Management
-          </p>
-          <div className="flex gap-3">
-            <span className="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs rounded-full border border-blue-500/20">
-              React
-            </span>
-            <span className="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs rounded-full border border-blue-500/20">
-              Vite
-            </span>
-            <span className="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs rounded-full border border-blue-500/20">
-              AI
-            </span>
-          </div>
-        </div>
-
-        <div className="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm hover:border-blue-500/50 transition-all group">
-          <div className="h-48 bg-black/40 rounded-xl mb-6 overflow-hidden flex items-center justify-center">
-            <img
-              src={playingGod}
-              alt="Musical Code Preview"
-              className="h-full w-full object-cover rounded-xl"
-            />
-          </div>
-          <h3 className="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors">
-            MUSICAL CODE
-          </h3>
-          <p className="text-gray-400 text-sm mb-6">
-            Interaktif Guitar Chord Visualizer
-          </p>
-          <div className="flex gap-3">
-            <span className="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs rounded-full border border-blue-500/20">
-              React
-            </span>
-            <span className="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs rounded-full border border-blue-500/20">
-              Spotify API
-            </span>
-          </div>
-        </div>
-
-        <div className="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm hover:border-blue-500/50 transition-all group">
-          <div className="h-48 bg-black/40 rounded-xl mb-6 overflow-hidden flex items-center justify-center">
-            <img
-              src={clockin}
-              alt="Clockin Preview"
-              className="h-full w-full object-cover rounded-xl"
-            />
-          </div>
-          <h3 className="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors">
-            CLOCKIN
-          </h3>
-          <p className="text-gray-400 text-sm mb-6">
-            Membuat Aplikasi Absensi Sederhana untuk Meningkatkan Manajemen Waktu Menggunakan Flutter dan PHP Native
-          </p>
-          <div className="flex gap-3">
-            <span className="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs rounded-full border border-blue-500/20">
-              UI/UX Design
-            </span>
-            <span className="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs rounded-full border border-blue-500/20">
-              Flutter
-            </span>
-            <span className="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs rounded-full border border-blue-500/20">
-              Dashboard Admin
-            </span>
-          </div>
-        </div>
-
-
-        <div className="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm hover:border-blue-500/50 transition-all group">
-          <div className="h-48 bg-black/40 rounded-xl mb-6 overflow-hidden flex items-center justify-center">
-            <img
-              src={jokiTugas}
-              alt="Joki Tugas Preview"
-              className="h-full w-full object-cover rounded-xl"
-            />
-          </div>
-          <h3 className="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors">
-            Academic Task Management
-          </h3>
-          <p className="text-gray-400 text-sm mb-6">
-            Menangani Tugas dengan Kecepatan Kilat
-          </p>
-          <div className="flex gap-3">
-            <span className="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs rounded-full border border-blue-500/20">
-              Ms Office
-            </span>
-            <span className="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs rounded-full border border-blue-500/20">
-              UI/UX Design
-            </span>
-            <span className="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs rounded-full border border-blue-500/20">
-              Web/Mobile Programming
-            </span>
-          </div>
-        </div>
-
+        {projects.map((project, index) => (
+          <ProjectCard key={project.title} project={project} index={index} />
+        ))}
       </div>
     </section>
   );
