@@ -24,7 +24,7 @@ const Footer = () => {
                                 { href: "https://github.com/10-Abel-01/", icon: <FaGithub size={20} />, label: "GitHub" },
                                 { href: "https://www.instagram.com/saferyan06", icon: <FaInstagram size={20} />, label: "Instagram" },
                                 { href: "https://www.facebook.com/profile.php?id=100084011095830", icon: <FaFacebook size={20} />, label: "Facebook" },
-                                { href: "https://wa.me/628597305027", icon: <FaWhatsapp size={20} />, label: "WhatsApp" },
+                                { href: "https://wa.me/6285973025027", icon: <FaWhatsapp size={20} />, label: "WhatsApp" },
                             ].map((item) => (
                                 <a
                                     key={item.label}
