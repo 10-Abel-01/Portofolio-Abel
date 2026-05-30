@@ -79,7 +79,7 @@ const Navbar = () => {
             <button
               key={id}
               onClick={() => scrollToSection(id)}
-              className={`text-[10px] md:text-sm px-4 py-2 rounded-full transition-all duration-300 border ${
+              className={`text-[10px] md:text-sm px-3 py-1 rounded-full transition-all duration-300 border ${
                 isActive
                   ? "bg-blue-500/20 border-blue-500 text-blue-400 font-semibold"
                   : "border-blue-500/50 text-white hover:bg-blue-500/10"

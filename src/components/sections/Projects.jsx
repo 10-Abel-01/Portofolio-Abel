@@ -66,7 +66,7 @@ const ProjectCard = ({ project, index }) => {
       transition={{ duration: 0.5, delay: (index % 2) * 0.15, ease: "easeOut" }}
       className="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm hover:border-blue-500/50 transition-all group flex flex-col"
     >
-      <div className="h-48 bg-black/40 rounded-xl mb-6 overflow-hidden">
+      <div id="projects" className="h-48 bg-black/40 rounded-xl mb-6 overflow-hidden">
         <img
           src={project.image}
           alt={project.alt}
