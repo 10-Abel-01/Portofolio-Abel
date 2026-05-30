@@ -2,6 +2,8 @@ import React from "react";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { FaLinkedin, FaGithub, FaInstagram, FaFacebook, FaWhatsapp } from "react-icons/fa";
 
+import FadeIn from "../layout/FadeIn";
+
 const Footer = () => {
     return (
         <FadeIn direction="up" delay={0.1}>
