@@ -23,6 +23,20 @@ const SkillBar = ({ label, value, delay }) => {
   );
 };
 
+const hobbies = [
+  { emoji: "🎹", label: "Piano & Gitar",        desc: "Instrumen utama"           },
+  { emoji: "🎵", label: "Music Listener",        desc: "Catchy · Classical · OST"  },
+  { emoji: "🎼", label: "Full Orchestra",         desc: "Concerto / Symphony"       },
+  { emoji: "🎣", label: "Fishing",               desc: "Side quest favorit"        },
+  { emoji: "💻", label: "Coding",                desc: "Obviously."                },
+  { emoji: "🎨", label: "Drawing & Painting",    desc: "Digital & Traditional"     },
+  { emoji: "🎬", label: "Editing",               desc: "Video / Photo"             },
+  { emoji: "🏸", label: "Badminton & Exercise",  desc: "Skill fisik +10"           },
+  { emoji: "📚", label: "Reading",               desc: "Lore hunting IRL"          },
+  { emoji: "⛩️", label: "Anime",                 desc: "Otaku level: OVER 9000"    },
+  { emoji: "🔧", label: "Skill Acquisition",     desc: "Selalu unlock skill baru"  },
+];
+
 const About = () => {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, margin: "-80px" });
@@ -37,10 +51,10 @@ const About = () => {
   };
 
   const skills = [
-    { label: "Logic (Python/SQL)", value: "90%", delay: 0.2 },
-    { label: "Frontend (React/Tailwind)", value: "85%", delay: 0.35 },
-    { label: "Pressure Resistance", value: "100%", delay: 0.5 },
-    { label: "Otaku Level", value: "100%", delay: 0.65 },
+    { label: "Logic (Python/SQL)",        value: "90%",  delay: 0.2  },
+    { label: "Frontend (React/Tailwind)", value: "85%",  delay: 0.35 },
+    { label: "Pressure Resistance",       value: "100%", delay: 0.5  },
+    { label: "Otaku Level",               value: "100%", delay: 0.65 },
   ];
 
   return (
@@ -89,7 +103,7 @@ const About = () => {
                 <p><span className="text-blue-500/50">attr.</span> <strong className="text-zinc-300">Name:</strong> Abel Saferyan</p>
                 <p><span className="text-blue-500/50">class.</span> <strong className="text-zinc-300">IT Student</strong></p>
                 <p><span className="text-blue-500/50">sub.</span> <strong className="text-zinc-300">Web / Mobile / IoT Dev</strong></p>
-                <p><span className="text-blue-500/50">rank.</span> <strong className="text-blue-500 font-bold">GPA 3.61 / 4.00</strong></p>
+                <p><span className="text-blue-500/50">rank.</span> <strong className="text-blue-500 font-bold">GPA 3.62 / 4.00</strong></p>
                 <p><span className="text-blue-500/50">guild.</span> <strong className="text-zinc-300">UBSI Bekasi</strong></p>
               </div>
             </div>
@@ -139,7 +153,6 @@ const About = () => {
               <p className="text-[11px] font-mono text-zinc-500">
                 // Fun fact: Saya penikmat musik setia & kolektor bug absurd pas debugging wkwk.
               </p>
-
               <a
                 href="/cv-abel-saferyan.pdf"
                 download
@@ -154,6 +167,49 @@ const About = () => {
                 </svg>
                 Download_CV.pdf
               </a>
+            </div>
+          </motion.div>
+
+          <motion.div
+            custom={2}
+            variants={cardVariants}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            className="md:col-span-3 bg-[#121212] border border-zinc-800/80 rounded-2xl p-6 md:p-8 hover:border-blue-500/20 transition-all duration-300 shadow-xl"
+          >
+            <div className="flex items-center space-x-3 border-b border-zinc-800 pb-4 mb-6">
+              <span className="flex h-2 w-2 relative">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500" />
+              </span>
+              <h3 className="font-mono font-bold tracking-widest text-xs text-zinc-400 uppercase">
+                Passive_Skills &amp; Hobbies
+              </h3>
+              <span className="ml-auto font-mono text-[10px] text-zinc-600">
+                {hobbies.length} skills unlocked
+              </span>
+            </div>
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+              {hobbies.map((hobby, i) => (
+                <motion.div
+                  key={hobby.label}
+                  initial={{ opacity: 0, scale: 0.85 }}
+                  animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                  transition={{ duration: 0.3, delay: 0.4 + i * 0.05, ease: "easeOut" }}
+                  className="flex flex-col items-center gap-2 p-3 rounded-xl bg-zinc-900/60 border border-zinc-800/60 hover:border-amber-500/30 hover:bg-zinc-900 transition-all duration-200 group/hobby cursor-default text-center"
+                >
+                  <span className="text-2xl group-hover/hobby:scale-110 transition-transform duration-200">
+                    {hobby.emoji}
+                  </span>
+                  <p className="font-mono text-[10px] font-bold text-zinc-300 leading-tight">
+                    {hobby.label}
+                  </p>
+                  <p className="font-mono text-[9px] text-zinc-600 leading-tight">
+                    {hobby.desc}
+                  </p>
+                </motion.div>
+              ))}
             </div>
           </motion.div>
 
