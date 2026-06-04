@@ -25,7 +25,7 @@ const SkillBar = ({ label, value, delay }) => {
 
 const hobbies = [
   { emoji: "🎹", label: "Piano & Gitar",        desc: "Instrumen utama"           },
-  { emoji: "🎵", label: "Music Listener",        desc: "Catchy · Classical · OST"  },
+  { emoji: "🎵", label: "Music Listener",        desc: "Catchy · Classical"  },
   { emoji: "🎼", label: "Full Orchestra",         desc: "Concerto / Symphony"       },
   { emoji: "🎣", label: "Fishing",               desc: "Side quest favorit"        },
   { emoji: "💻", label: "Coding",                desc: "Obviously."                },
@@ -33,7 +33,7 @@ const hobbies = [
   { emoji: "🎬", label: "Editing",               desc: "Video / Photo"             },
   { emoji: "🏸", label: "Badminton & Exercise",  desc: "Skill fisik +10"           },
   { emoji: "📚", label: "Reading",               desc: "Lore hunting IRL"          },
-  { emoji: "⛩️", label: "Anime",                 desc: "Otaku level: OVER 9000"    },
+  { emoji: "⛩️", label: "Anime",                 desc: "Wibu Classical wkwk"    },
   { emoji: "🔧", label: "Skill Acquisition",     desc: "Selalu unlock skill baru"  },
 ];
 
@@ -54,7 +54,7 @@ const About = () => {
     { label: "Logic (Python/SQL)",        value: "90%",  delay: 0.2  },
     { label: "Frontend (React/Tailwind)", value: "85%",  delay: 0.35 },
     { label: "Pressure Resistance",       value: "100%", delay: 0.5  },
-    { label: "Otaku Level",               value: "100%", delay: 0.65 },
+    { label: "Otaku Level",               value: "95%", delay: 0.65 },
   ];
 
   return (
