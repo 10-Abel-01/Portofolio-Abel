@@ -74,10 +74,9 @@ const About = () => {
           <p className="text-xs font-mono tracking-[0.3em] text-blue-500 uppercase mb-2 animate-pulse">
             // Profile_Database
           </p>
-          <h2 className="text-3xl md:text-4xl font-extrabold tracking-wider bg-gradient-to-r from-white via-zinc-200 to-zinc-500 bg-clip-text text-transparent">
+          <h2 className="text-[2rem] font-bold tracking-wider bg-clip-text">
             ABOUT ME
           </h2>
-          <div className="w-12 h-[2px] bg-blue-500 mt-4 rounded-full" />
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
